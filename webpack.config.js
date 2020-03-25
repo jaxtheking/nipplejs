@@ -1,4 +1,5 @@
 const path = require('path');
+const UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 
 const DEBUG = process.env.NODE_ENV !== 'production';
 const NAME = 'nipplejs';
@@ -31,5 +32,8 @@ module.exports = {
                 ]
             },
         ]
-    }
+    },
+    plugins: [
+        new UnminifiedWebpackPlugin()
+    ]
 };
